@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&family=Roboto&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #134e5e;
+}
+
+.load{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#loader-wrapper {
+    background-color: #6b7d7d;
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+}/*For the element that contains the loader animation*/
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}/*For the loader animation*/
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #e74c3c;
+    -webkit-animation: spin 3s linear infinite;
+      animation: spin 3s linear infinite;
+}/*For the loader animation*/
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top-color: #f9c922;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}/*For the loader animation*/
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}/*Defining spin animation*/
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}/*Defining spin animation*/
+
+.animate{
+  display: flex;
+  justify-content: center;
+  height: 130px;
+  padding-bottom: 0;
+}/*Animation for brand anme*/
+
+h1{
+  position: relative;
+  color: #0e3742;
+  -webkit-box-reflect: below 1px linear-gradient(transparent,#0004);
+  animation: light 5s linear infinite;
+  font-family: 'Montserrat',sans-serif;
+  font-size: 50px;
+  outline: none;
+  line-height: 50px;
+}/*For the animation of brand name*/
+
+@keyframes light {
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+  {
+    color: #0e3742;
+    text-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+  {
+    color: #fff;
+    text-shadow: 0 0 10px #03bcf4,0 0 20px #03bcf4,0 0 40px #03bcf4,0 0 80px #03bcf4,0 0 160px #03bcf4;
+  }
+}/*Defining light animation*/
+
+ul{
+   margin-left: 20px;
+   list-style-type: none;
+   font-size: 25px;
+}
+
+ul li {
+  padding-left: 30px;
+  background-image: url(a.png);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  color: #f53333;
+}/*Custom bullets*/
+
+ul li:hover{
+  background-image: url(b.png);
+  color: #ae3dff;
+  cursor: pointer;
+}/*Differnet custom bullets when hovering*/
+
+.list{
+  padding-bottom: 100px;
+}
+
+.one{
+  font-weight: bold;
+  font-family: 'Montserrat',sans-serif;
+}/*Differnt font types and font weights for each bullet*/
+
+.two{
+  font-weight: bolder;
+  font-family: 'Pattaya', sans-serif;
+}/*Differnt font types and font weights for each bullet*/
+
+.three{
+  font-weight: lighter;
+  font-family: 'Roboto', sans-serif;
+}/*Differnt font types and font weights for each bullet*/
+
+.four{
+  font-family: 'Reggae One', cursive;
+}/*Differnt font types and font weights for each bullet*/
